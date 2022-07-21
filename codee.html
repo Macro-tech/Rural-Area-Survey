@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural Welfare</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<!-- head ends here -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+<body ng-app="">
+
+    <div id="container_1">
+  
+        <h1 id="title">
+        Rural Welfare Survey 
+      </h1><!--title-->
+      <p id="description">
+        By this  project we aim to build a nation where even the people wth less privileges get the Facilities
+        that we do ,<b>Many people around us in our neighbouring rural areas are starving and going too sleep without Any
+        food whatsoever</b>.We wish to change this by creating this software where engineers like us can go to door to door
+        and provide the survey of the unpriviledged to those who wish to contribute to the society but dont know whee to 
+        start.If you find anyone who deserves better facilties ,fill their details in this form and they will be reached
+        by higher authorities for help accordingly. 
+      </p><!--1602-19-737-011 1602-19-737-021--->
+        
+      </div><!---container_1--->
+      <div id="container_2">
+        
+        <form name="myForm" id="survey-form">
+          <label id="name-label">Name</label>
+            <input type="text" id="name" name="myName" ng-model="myName" required class="form" required placeholder="Insert your name"><br><!--name--->
+            <span ng-show="myForm.myName.$touched && myForm.myName.$invalid">The name is required.<br></span>
+          <label id="email-label">Email</label>
+            <input type="email" id="email" name="myInput" ng-model="myInput" class="form" required placeholder="Insert your email"><br><!---email-->
+         
+      
+            <label id="number-label">Age</label>
+            <input type="number" id="number" name="mynumber" ng-model="mynumber" class="form" placeholder="Age" min=18 max=60 required><br><!---number-->
+            <span ng-show="myForm.mynumber.$touched && myForm.mynumber.$invalid">Age is required.<br></span>
+            <label id="number-label">House no.</label>
+            <input type="number" id="number" name="number" class="form"   required><br><!---number-->
+          <!---number-->
+            <label id="number-label">Family Members</label>
+            <input type="number" id="number" name="number" class="form"  required><br><!---number-->
+            <label id="number-label">Mobile no</label>
+            <input type="number" id="number" ng-model="mynumber" name="mymobile" class="form"  required><br><!---number-->
+            <span ng-show="myForm.mymobile.$touched && myForm.mymobile.$invalid">Mobile is required.<br></span>
+            <label id="name-label">Address</label>
+            <input type="text" id="name" ng-model="useraddress" class="form" required ><br>
+            <label id="name-label">State</label>
+            <input type="text" id="name" name="name" class="form" required ><br>
+            <label id="name-label">City</label>
+            <input type="text" id="name" ng-model="my" name="my" class="form" required ><br>
+            <span ng-show="myForm.my.$touched && myForm.my.$invalid">City is required.<br></span>
+          <p>Gender</p>
+          <label>
+            <input type="radio" name="genre" value="Male">Male
+          </label>
+          <label>
+            <input type="radio" name="genre" value="Female">Female
+          </label>
+          <p><b>House Particulars</b></p>
+          <p>Electricity</p>
+          <label>
+            <input type="radio" >Yes
+          </label>
+          <label>
+            <input type="radio" >No
+          </label>
+          <p>Water Connection</p>
+          <label>
+            <input type="radio" >Yes
+          </label>
+          <label>
+            <input type="radio" >No
+          </label>
+          <p>Toilet</p>
+          <label>
+            <input type="radio" >Yes
+          </label>
+          <label>
+            <input type="radio" >No
+          </label>
+          <p>Ration Card</p>
+          <label>
+            <input type="radio" >Yes
+          </label>
+          <label>
+            <input type="radio" >No
+          </label>
+          <p>Medical Facilities</p>
+          <label>
+            <input type="radio" >Yes
+          </label>
+          <label>
+            <input type="radio" >No
+          </label>
+          <label>
+            <input type="radio" >Some
+          </label>
+          <p><b>Expenses</b></p>
+          <label id="number-label">Income(Monthly)</label>
+          <input type="number"   required><br><br>
+          <label id="number-label">Rent</label>
+          <input type="number"   required><br><br>
+          <label id="number-label">Electricity Bill</label>
+          <input type="number"   required><br><br>
+          <label id="number-label">Water Bill</label>
+          <input type="number"   required><br><br>
+          <label id="number-label">Education fees</label>
+          <input type="number"   required><br><br>
+          <label id="number-label">Medical Expenses</label>
+          <input type="number"   required><br><br>
+          <p><b>ID Particulars</b></p>
+          <p>Birth Certificate</p>
+          <label>
+            <input type="radio" >Yes
+          </label>
+          <label>
+            <input type="radio" >No
+          </label>
+          <p>Bank Account</p>
+          <label>
+            <input type="radio" >Yes
+          </label>
+          <label>
+            <input type="radio" >No
+          </label>
+          <p>Included in Ration Card</p>
+          <label>
+            <input type="radio" >Yes
+          </label>
+          <label>
+            <input type="radio" >No
+          </label>
+          <br>
+          <p>Any Health issues</p>
+          <label>
+            <input type="radio" >Yes
+          </label>
+          <label>
+            <input type="radio" >No
+          </label>
+          <br>
+          <label id="name-label">If yes,please mention</label>
+            <input type="text" id="name" name="name" class="form"  ><br>
+
+
+
+        <!---radioButtons--->
+          
+          <p>Any comments or suggestions?</p>
+            <textarea
+              id="comments"
+              name="comment"
+              placeholder="Enter your comment here..."
+            ></textarea><!---comment-->
+          
+          
+          <input type="submit" id="submit" name="submit" value="Submit">
+        </form><!---survey-form--->
+      </div><!--container_2--->
+      
+      
+     
+</body>
+
+</html>
